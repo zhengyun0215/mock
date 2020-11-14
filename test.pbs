@@ -9,6 +9,6 @@
 ###Set python Environment ###
 module load anaconda/anaconda3
 
-#my job start
+#job start
 cd /home/yunzheng/mock/orphan_new/code
 python multest.py 
