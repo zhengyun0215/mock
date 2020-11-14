@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "test.py", line 27, in <module>
+    print('time:',(st2 - st1))
+NameError: name 'st1' is not defined

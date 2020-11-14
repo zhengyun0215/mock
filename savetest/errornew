@@ -1,0 +1,18 @@
+multest.py:28: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  print('time:'(st2 - st1))
+Traceback (most recent call last):
+  File "multest.py", line 14, in <module>
+    dat = np.array([84,85,86,87,88,89,91,92,94,95,97,99])
+NameError: name 'np' is not defined
+Traceback (most recent call last):
+  File "multest.py", line 25, in <module>
+    st = time.time()
+NameError: name 'time' is not defined
+Traceback (most recent call last):
+  File "multest.py", line 25, in <module>
+    st = time.time()
+NameError: name 'time' is not defined
+Traceback (most recent call last):
+  File "multest.py", line 30, in <module>
+    print('time:',(st2 - st1))
+NameError: name 'st1' is not defined

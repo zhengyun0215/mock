@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "findorphan_1.py", line 20, in <module>
+    multicore()
+  File "findorphan_1.py", line 14, in multicore
+    np.savetxt('/home/yunzheng/mock/orphan_new/test_%d.txt'%i,res)
+TypeError: %d format: a number is required, not list

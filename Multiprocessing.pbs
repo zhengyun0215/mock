@@ -1,0 +1,14 @@
+#PBS -N Multiprocessing 
+#PBS -M yunzheng@sjtu.edu.cn
+#PBS -l nodes=1:ppn=36
+#PBS -l mem=300gb
+#PBS -l walltime=10:00:00
+#PBS -q normal
+#PBS -o /home/yunzheng/mock/orphan_new/code/output_np
+#PBS -e /home/yunzheng/mock/orphan_new/code/error_np
+###Set python Environment ###
+module load anaconda/anaconda3
+
+#job start
+cd /home/yunzheng/mock/orphan_new/code
+python findorphan_1.py 

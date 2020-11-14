@@ -1,0 +1,14 @@
+#PBS -N testMultiprocessing 
+#PBS -M yunzheng@sjtu.edu.cn
+#PBS -l nodes=1:ppn=64
+#PBS -l mem=60gb
+#PBS -l walltime=10:00:00
+#PBS -q normal
+#PBS -o /home/yunzheng/mock/orphan_new/code/savetest/outputnew
+#PBS -e /home/yunzheng/mock/orphan_new/code/savetest/errornew
+###Set python Environment ###
+module load anaconda/anaconda3
+
+#job start
+cd /home/yunzheng/mock/orphan_new/code
+python multest.py 

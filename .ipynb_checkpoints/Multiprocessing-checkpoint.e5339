@@ -1,0 +1,27 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "findorphan_1.py", line 8, in job
+    np.savetxt('/home/yunzheng/mock/orphan_new/code/savetest/test_%d.txt'%x,y)
+  File "<__array_function__ internals>", line 5, in savetxt
+  File "/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/npyio.py", line 1394, in savetxt
+    raise ValueError(
+ValueError: Expected 1D or 2D array, got 0D array instead
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "findorphan_1.py", line 23, in <module>
+    multicore()
+  File "findorphan_1.py", line 16, in multicore
+    res = pool.map(job,i)
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+ValueError: Expected 1D or 2D array, got 0D array instead
