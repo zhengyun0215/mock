@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from AbundanceMatching import *
 from scipy import integrate
+import time
+import multiprocessing as mp
+
 
 boxsize = 600
 print("Let's start! :)")
@@ -107,7 +110,8 @@ def mul(x):
     
     
     np.savetxt('/home/yunzheng/mock/abundance_new/data/newmag_%d.txt'%x,newmag)
-
+    end = time.time()
+    print("time spent : %s minutes"%((end - start)/60))
     
 dat = np.array([84,85,86,87,88,89,91,92,94,95,97,99])
 
