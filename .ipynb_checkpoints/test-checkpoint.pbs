@@ -5,6 +5,8 @@
 #PBS -l walltime=36:00:00
 #PBS -q normal
 
+#PBS -o /home/yunzheng/mock/abundance_new/code/plot2.out
+#PBS -e /home/yunzheng/mock/abundance_new/code/plot2.error
 ###Set python Environment ###
 
 module load anaconda/anaconda3

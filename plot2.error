@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "abumatching_com.py", line 80, in <module>
+    plt.scatter(v_all,catalog,s = 0.05)
+NameError: name 'v_all' is not defined

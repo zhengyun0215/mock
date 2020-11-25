@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "abumatching_com.py", line 17, in <module>
+    nd_halos = calc_number_densities(vpeak,600)
+NameError: name 'calc_number_densities' is not defined
+Traceback (most recent call last):
+  File "abumatching_com.py", line 79, in <module>
+    plt.scatter(v_all,catalog,s = 0.05)
+NameError: name 'plt' is not defined
