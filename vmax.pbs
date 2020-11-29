@@ -1,0 +1,15 @@
+#PBS -N vmax
+#PBS -M yunzheng@sjtu.edu.cn
+#PBS -l nodes=1:ppn=64
+
+#PBS -l walltime=72:00:00
+#PBS -q normal
+
+###Set python Environment ###
+
+module load anaconda/anaconda3
+
+#job start
+cd /home/yunzheng/mock/color/code
+python vpeak_assign_col.py
+
