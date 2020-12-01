@@ -1,4 +1,4 @@
-vpeak_assign_col.py:
+vmax_collection.py:
     vmax.pbs提交	
     x in range(100)
     np.savetxt('/home/yunzheng/mock/color/data/vmax/snapshot_%s.dat'%x)
