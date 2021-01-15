@@ -1,0 +1,11 @@
+#PBS -N newcat_add_mag
+#PBS -l nodes=1:ppn=1
+
+#PBS -l walltime=72:00:00
+#PBS -q normal
+
+
+#job start
+cd /home/yunzheng/mock/color/code
+python newcat_add_mag.py
+
