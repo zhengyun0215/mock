@@ -1,0 +1,9 @@
+#PBS -N colorassignnew_4
+#PBS -l nodes=1:ppn=64
+#PBS -l walltime=72:00:00
+#PBS -q normal
+#PBS -l mem=200gb
+
+#job start
+cd /home/yunzheng/mock/color/code
+python colorassignnew4.py
