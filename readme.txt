@@ -46,7 +46,8 @@ add_birthsnap.py:
     
 zform_newcat.py:
 
-    对subhalo的包含birthsnapshot新的catalogue增加zform
+    计算subhalo zform
+    对包含birthsnapshot的新的catalogue:snapshot_92_new.npy 增加zform
     
     zform_newcat.pbs提交
     
@@ -64,3 +65,20 @@ zformcheck_copy.py:
     
     np.save('/home/yunzheng/mock/color/data/newcatalogue/snap_92_new_new_zform.npy',c)
     存了两列数: N(total) 和 N(poor)
+
+
+
+
+newcat_add_mag.py:
+
+	对catalogue增加mag with scatter
+	
+	newcat_add_mag.pbs提交
+
+
+	a = np.stack((subid,vpeak,pos_x,pos_y,pos_z,v_x,v_y,v_z,zform,newmag),axis= -1)	
+	np.save('/home/yunzheng/mock/color/data/newcatalogue/snapshot_92_new_withmag.npy',a)
+	存新的catalogue：snapshot_92_new_withmag.npy
+
+
+
