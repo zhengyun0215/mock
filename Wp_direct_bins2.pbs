@@ -1,0 +1,14 @@
+#PBS -N Wp_direct_bins
+#PBS -l nodes=1:ppn=64
+#PBS -q normal
+#PBS -o /home/yunzheng/mock/clustering/code/output/wp_direct_bins2.o
+#PBS -e /home/yunzheng/mock/clustering/code/output/wp_direct_bins2.e
+#PBS -l walltime=72:00:00
+
+
+module load compiler/gcc-10.2.0
+#job start
+cd /home/yunzheng/mock/clustering/code
+python Wp_direct_bins2.py
+
+
