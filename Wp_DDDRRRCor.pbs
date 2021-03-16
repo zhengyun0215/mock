@@ -1,0 +1,42 @@
+#PBS -N Wp_DDDRRR
+#PBS -l nodes=1:ppn=64
+#PBS -l walltime=7200:00:00
+#PBS -q fat
+#PBS -o /home/yunzheng/mock/clustering/output/Wp_DDDRRRoutput
+#PBS -e /home/yunzheng/mock/clustering/output/Wp_DDDRRRerror
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+
+__conda_setup="$('/home/yunzheng/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/yunzheng/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/home/yunzheng/anaconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/yunzheng/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+
+#__conda_setup="$('/home/yunzheng/anaconda/envs/py37/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else       
+#    if [ -f "/home/yunzheng/anaconda/envs/py37/etc/profile.d/conda.sh" ]; then
+#        . "/home/yunzheng/anaconda/envs/py37/etc/profile.d/conda.sh"
+#    else     
+#        export PATH="/home/yunzheng/anaconda/envs/py37/bin:$PATH"
+#    fi
+#fi 
+#unset __conda_setup
+# <<< conda initialize <<<
+conda activate py37 
+    
+    
+#job start
+cd /home/yunzheng/mock/clustering/code
+python -u Wp_DDDRRRCor.py
+
