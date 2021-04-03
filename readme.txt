@@ -39,6 +39,7 @@ add_birthsnap.py:
     
     birth_newcat.pbs提交
     
+    a = np.stack((subid,vpeak,vpeaksnap,birth,mass,pos_x,pos_y,pos_z,v_x,v_y,v_z),axis= -1)
     np.save('/home/yunzheng/mock/color/data/newcatalogue/snapshot_92_new.npy',a)
     存新的catalogue : snapshot_92_new.npy
     
@@ -51,6 +52,8 @@ zform_newcat.py:
     
     zform_newcat.pbs提交
     
+    table = np.load('/home/yunzheng/mock/color/data/newcatalogue/snapshot_92_new.npy')
+    c = np.column_stack((table,z_form))
     np.save('/home/yunzheng/mock/color/data/newcatalogue/snap_92_new_with_zform.npy',c)
     存新的catalogue : snapshot_92_new_with_zform.npy
     
@@ -79,6 +82,16 @@ newcat_add_mag.py:
 	a = np.stack((subid,vpeak,pos_x,pos_y,pos_z,v_x,v_y,v_z,zform,newmag),axis= -1)	
 	np.save('/home/yunzheng/mock/color/data/newcatalogue/snapshot_92_new_withmag.npy',a)
 	存新的catalogue：snapshot_92_new_withmag.npy
+    
+    
+    
+newcataloguefinal.py:
+
+    对catalogue 把所有参数都放进去
+    直接在fat节点跑的
+    无pbs
+    
+    np.savez('/home/yunzheng/mock/color/data/newcatalogue/snapshot_92_final.npz',subid = subid,vpeak = vpeak,mass = mass,posx = pos_x,posy = pos_y,posz = pos_z,vx = v_x,vy = v_y,vz = v_z,zform = zform,mag = newmag,color = color)
 
 
 
